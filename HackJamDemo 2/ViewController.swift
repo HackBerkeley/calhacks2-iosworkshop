@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var redView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func redSliderChanged(sender: UISlider) {
+        redView.backgroundColor = UIColor(red: CGFloat(sender.value), green: 0.0, blue: 0.0, alpha: 1.0)
+    }
 
 }
 
